@@ -4,6 +4,10 @@
  */
 package es20p89cassonettismart;
 
+import java.net.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author FEDERICOCOPES
@@ -14,13 +18,12 @@ public class Es20p89CassonettiSmart {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        
-        //ProvaAdamoli
-        
-        
-        //ProvaCopes
+        try {
+            ServerCassonetti server = new ServerCassonetti(12345);
+            server.start();
+        } catch (SocketException ex) {
+            Logger.getLogger(Es20p89CassonettiSmart.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

@@ -4,7 +4,7 @@
  */
 package es20p89cassonettismart;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class TesseraRFID {
     int id; // identificativo numerico
-    Date d; // ultima apertura
+    LocalDateTime d; // ultima apertura
     
     public TesseraRFID(int id){
         this.id = id;
@@ -26,11 +26,11 @@ public class TesseraRFID {
         this.id = id;
     }
 
-    public Date getD() {
+    public LocalDateTime getD() {
         return d;
     }
 
-    public void setD(Date d) {
+    public void setD(LocalDateTime d) {
         this.d = d;
     }
     
