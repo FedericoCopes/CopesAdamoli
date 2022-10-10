@@ -14,8 +14,9 @@ public class TesseraRFID {
     int id; // identificativo numerico
     LocalDateTime d; // ultima apertura
     
-    public TesseraRFID(int id){
+    public TesseraRFID(int id, LocalDateTime d){
         this.id = id;
+        this.d = d;
     }
 
     public int getId() {
